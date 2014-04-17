@@ -1,6 +1,6 @@
-node_modules/
-bower_components/
-*.log
-
-build/
+node_modules
+dist
+.tmp
+app/lib
+.yo-rc.json
 dist/
