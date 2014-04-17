@@ -4,25 +4,22 @@ define(function(require, exports, module) {
     // import dependencies
     var Engine = require('famous/core/Engine');
     var Surface = require('famous/core/Surface');
-    var Modifier = require('famous/core/Modifier');
 
     // create the main context
     var mainContext = Engine.createContext();
 
-    // your app here
-    var outline = new Surface({
-        size: [200, 200],
-        content: '<img width="200" src="' + 'content/images/famous_symbol_transparent.png' + '"/>',
+    var firstSurface = new Surface({
+        content: '<H1>Niraj Shrestha<H1>',
+        size: [300, undefined],
         properties: {
-            lineHeight: '200px',
-            textAlign: 'center'
+            textAlign: 'center',
+            backgroundColor: '#FA5C4F',
+            color: 'white',
+            fontSize: '24px',
+            border: '15px'
         }
     });
 
-    var outlineModifier = new Modifier({
-        origin: [0.5, 0.5]
-    });
-
-    mainContext.add(outlineModifier).add(outline);
+    mainContext.add(firstSurface);
 
 });
